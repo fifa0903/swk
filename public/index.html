@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coba Tailwind</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    spacing: {
+                        '13': '3.25rem',
+                        '15': '3.75rem',
+                        '128': '32rem',
+                        '144': '36rem',
+                    },
+                    fontFamily: {
+                        agbalumo: ['Agbalumo'],
+                        inter: ['Inter'],
+                    },
+                    colors: {
+                        wpu: '#bada55',
+                        kopi: '#c0ff',
+                    },
+                },
+            },
+        };
+    </script>
+    <!-- <style type="text/tailwindcss">
+        *{
+        border: 1px solid red;
+    } 
+    </style> -->
 </head>
+
 <body>
-    <h1 class="text-4xl font-bold text-blue-200">Belajar Dulu Cuy</h1>
+    <h1 class="text-8xl m-10 text-center font-bold">Mari Belajar <span class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">TailwindCSS</span></h1>
+    <section class="mb-10 bg-gradient-to-r from-blue-300 via-blue-600 to-blue-900">
+        <h2 class="font-bold text-blue-700 text-center bg-yellow-200">spacing</h2>
+        <div class="m-5 ">margin</div>
+        <div class="-ml-5">margin minus</div>
+        <div class="px-10">padding</div>
+    </section>
+    <section class="mb-13 w-1/2">
+        <h2 class="font-bold text-kopi">sizing</h2>
+        <div class="w-20 h-20">kotak 1</div>
+        <!-- <div class="max-w-xs min-h-screen">kotak 2</div> -->
+    </section>
+    <section class="mb-96 max-w-3xl mx-auto font-inter">
+        <h2 class="font-bold mb-2 text-4xl">Belajar Typography menggunakan TailwindCSS</h2>
+        <div class="mb-4 text-lg">By <a href="#" class="font-semibold">Muhammad Faizal</a>, 2 November 2023</div>
+        <p class="mb-4">
+            Lorem ipsum dolor sit, amet <a href="#" class="text-blue-600 underline font-semibold">consectetur</a> adipisicing elit. Aperiam veniam minima, magni excepturi
+            perspiciatis at modi temporibus similique laboriosam odit, dicta eaque iste maiores? Eveniet sunt laudantium
+            quasi pariatur repudiandae.
+        </p>
+        <p class="mb-4 italic font-thin">
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione asperiores excepturi, quis exercitationem
+            possimus unde aspernatur necessitatibus nihil sunt alias?"
+        </p>
+        <p class="mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas accusamus incidunt earum reprehenderit cum
+            magnam illum! Quisquam, sint? Magnam iusto maxime pariatur illo fuga harum asperiores numquam, tempora
+            labore obcaecati?
+        </p>
+    </section>
 </body>
+
 </html>
